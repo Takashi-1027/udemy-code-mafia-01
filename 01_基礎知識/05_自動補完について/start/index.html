@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 自動保管の使い方 -->
+  <!-- #containerと入力してtabキーを押すとid属性が付与されたdivタグが作成される -->
+  <div id="container"></div>
+
+  <!-- .containerと入力してtabキーを押すとclass属性が付与されたdivタグが作成される -->
+  <div class="cla"></div>
+
+  <!-- #container>.clsと入力してtabキーを押すとid属性が付与されたdivタグの中にさらにclass属性が付与されたdivタグが生成される -->
+  <div id="container">
+    <div class="cls"></div>
+  </div>
+
+  <!-- #container>.cls*6と入力してtabキーを押すとid属性が付与されたdivタグの中に6つ(*6とはn×6=6nと同じ意味)のclass属性が付与されたdivタグが作成される -->
+  <div id="container">
+    <div class="cls"></div>
+    <div class="cls"></div>
+    <div class="cls"></div>
+    <div class="cls"></div>
+    <div class="cls"></div>
+    <div class="cls"></div>
+  </div>
+  <!-- #container>.cls-$*6($の部分が数字として表示される)と入力してtabキーを押すとid属性が付与されたdivタグの中に6つのclass属性が付与されたdivタグが作成される -->
+  <div id="container">
+    <div class="cls-1"></div>
+    <div class="cls-2"></div>
+    <div class="cls-3"></div>
+    <div class="cls-4"></div>
+    <div class="cls-5"></div>
+    <div class="cls-6"></div>
+  </div>
+  
+  <!-- #container>.cls-$$*6($$の部分が00~99として表示される)と入力してtabキーを押すとid属性が付与されたdivタグの中に6つのclass属性が付与されたdivタグが作成される -->
+  <div id="container">
+    <div class="cls-01"></div>
+    <div class="cls-02"></div>
+    <div class="cls-03"></div>
+    <div class="cls-04"></div>
+    <div class="cls-05"></div>
+    <div class="cls-06"></div>
+  </div>
+</body>
+</html>
