@@ -28,4 +28,22 @@
   background-color: black;
   color: white;
 }
+
+.btn-cube {
+  background-color: black;
+}
+
+.btn-cube .inner {
+  background-color: black;
+}
+
+/*
+sassを使っている場合、cssファイルの内容を変更してはいけない。
+その理由は、cssファイルの変更内容がsassによって上書きされるからである。
+例えば、チーム開発でsassを使用しているとすると
+自分がcssファイルにコードを記述したとして、その後に
+チームメンバーがsassにコードを記述すると
+自分がcssに書いたコードが上書きされてなくなってしまう。
+よって、sassを使う場合はcssファイルを変更してはいけない。
+*/
 /*# sourceMappingURL=style.css.map */

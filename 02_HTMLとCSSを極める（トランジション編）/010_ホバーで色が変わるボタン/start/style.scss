@@ -14,7 +14,7 @@ $cBlack: black;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s;
-/*
+  /*
 &:hoverの&(アンド/アンパサンド)は半角スペースをあけられない場合に使用する。
 半角スペースをあけないとcssファイル内の記述が
 .btn :hoverとなり.btnと:hoverの間に半角スペースがあいてしまい
@@ -22,9 +22,28 @@ $cBlack: black;
 
 また、半角スペースをあけてもいい記述の場合は
 &を省略することができる。
-*/ 
+*/
   &:hover {
     background-color: $cBlack;
     color: $cWhite;
   }
+
+  // 下記の記述をすれば文字列が連結できる
+  &-cube {
+    background-color: $cBlack;
+
+    & .inner {
+      background-color: $cBlack;
+    }
+  }
 }
+
+/*
+sassを使っている場合、cssファイルの内容を変更してはいけない。
+その理由は、cssファイルの変更内容がsassによって上書きされるからである。
+例えば、チーム開発でsassを使用しているとすると
+自分がcssファイルにコードを記述したとして、その後に
+チームメンバーがsassにコードを記述すると
+自分がcssに書いたコードが上書きされてなくなってしまう。
+よって、sassを使う場合はcssファイルを変更してはいけない。
+*/
