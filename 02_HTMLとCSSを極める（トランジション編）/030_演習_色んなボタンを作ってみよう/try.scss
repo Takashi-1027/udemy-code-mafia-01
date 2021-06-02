@@ -14,6 +14,7 @@ $cBlack: black;
     transition: all 0.3s;
     color: $cBlack;
     text-decoration: none !important;
+    //text-decoration: none !important;の!importantは、「詳細度よりも先にこの記述を読み込んで」というコード
 
     /* ここにボタンのスタイルを追加していこう */
     &.float:hover {
