@@ -48,5 +48,15 @@ $cBlack: black;
         box-shadow: 5px 5px 0 0 $cBlack;
       }
     }
+
+    &.solid {
+      box-shadow: 2px 2px 0 0 $cBlack;
+      border-radius: 7px;
+
+      &:hover {
+        transform: translate(2px, 2px);
+        box-shadow: none;
+      }
+    }
   }
 }
