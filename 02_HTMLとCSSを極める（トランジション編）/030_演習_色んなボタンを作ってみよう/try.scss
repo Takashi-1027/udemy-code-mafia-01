@@ -39,5 +39,14 @@ $cBlack: black;
       color: $cWhite;
       letter-spacing: 3px;
     }
+
+    &.shadow {
+      box-shadow: none;
+
+      &:hover {
+        transform: translate(-2.5px, -2.5px);
+        box-shadow: 5px 5px 0 0 $cBlack;
+      }
+    }
   }
 }
