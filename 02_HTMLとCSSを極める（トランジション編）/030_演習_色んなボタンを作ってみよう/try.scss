@@ -33,5 +33,11 @@ $cBlack: black;
         box-shadow: none;
       }
     }
+
+    &.letter-spacing:hover {
+      background-color: $cBlack;
+      color: $cWhite;
+      letter-spacing: 3px;
+    }
   }
 }
