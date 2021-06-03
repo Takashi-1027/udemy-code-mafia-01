@@ -1,9 +1,21 @@
+@charset "UTF-8";
 .rect {
   width: 100px;
   height: 100px;
   margin: 0 auto;
   background-color: orangered;
-  -webkit-transform: translate(50px);
-          transform: translate(50px);
+  -webkit-transform: translate(50px, 50px);
+          transform: translate(50px, 50px);
+  /*
+  translate()の関数は物体の位置を指定する際に使用する。
+  x軸(横軸)は左がマイナス、右がプラスであるため、
+  右方向に50px移動するなら、そのまま50px
+  左方向に50px移動する多なら、-50pxと記述する。
+  y軸(縦軸)は上方向がマイナスで、下方向がプラスである。
+  px指定でなくても, %でもしてできる。
+  x方向のみ移動したい場合はtransform: translateX(50px)
+  とすることで、引数を一つにすることができる、
+  yも同様にできる。
+  */
 }
 /*# sourceMappingURL=style.css.map */
