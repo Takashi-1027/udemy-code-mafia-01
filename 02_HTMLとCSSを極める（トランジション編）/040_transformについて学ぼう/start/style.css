@@ -4,10 +4,14 @@
   height: 100px;
   margin: 0 auto;
   background-color: orangered;
-  -webkit-transform: translate(50px, 50px);
-          transform: translate(50px, 50px);
-  /*
-  translate()の関数は物体の位置を指定する際に使用する。
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+/*
+  transform: translate()の関数は物体の位置を指定する際に使用する。
   x軸(横軸)は左がマイナス、右がプラスであるため、
   右方向に50px移動するなら、そのまま50px
   左方向に50px移動する多なら、-50pxと記述する。
@@ -17,5 +21,14 @@
   とすることで、引数を一つにすることができる、
   yも同様にできる。
   */
-}
+/*
+  transform: rotate(30deg);
+  とすると30°右回転することができる。
+  左回転させたい場合は、マイナス値を記述するとよい。
+ 
+  さらに、transform-origin: top left;
+  と並行してに記述すると、回転の始点を設定することができる。
+  例えば、transform-origin: top left;と記述すると、
+  もともとあった物体(回転させる前の物体)の左上を始点として回転させることができる。
+  */
 /*# sourceMappingURL=style.css.map */
