@@ -3,8 +3,8 @@
   height: 100px;
   margin: 0 auto;
   background-color: orangered;
-  transform: rotate(-30deg);
-  transform-origin: top left;
+  transform: skew(-30deg, -30deg);
+  transform-origin: center center;
 }
 /*
   transform: translate()の関数は物体の位置を指定する際に使用する。
@@ -31,4 +31,19 @@
                   : bottom right;
                   : center center;
                   : -20px -20px;  (任意の値を入力することができる)
+  */
+
+/*
+  transform: skew(-30deg);  
+  は平行四辺形を定義する時に使う。
+  これは、x軸方向に30°ずれた平行四辺形を表している。
+  使用する際は値の単位がdegを使う。
+  また、transform: skew(-30deg, -30deg);
+  このように記述することで、x軸、y軸を定義することができる。
+
+  transform: skewX(-30deg);
+  transform: skewY(-30deg);
+  といった、skewの後にX,Yを記述することで、一つに絞ることができる
+  
+  transform: skewY(値);は斜めの線を表示したい時に使用することがある。
   */
