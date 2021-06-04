@@ -27,4 +27,8 @@
   と並行してに記述すると、回転の始点を設定することができる。
   例えば、transform-origin: top left;と記述すると、
   もともとあった物体(回転させる前の物体)の左上を始点として回転させることができる。
+  transform-origin: top left;
+                  : bottom right;
+                  : center center;
+                  : -20px -20px;  (任意の値を入力することができる)
   */
