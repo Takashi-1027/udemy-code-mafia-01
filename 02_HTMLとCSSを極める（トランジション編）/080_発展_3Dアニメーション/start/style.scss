@@ -20,6 +20,7 @@ $cBlack: black;
     overflow: hidden;
     z-index: 1;
     transform-style: preserve-3d;
+    perspective: 300px; //奥行きを設定する。
 
     &::before {
       content: '';
@@ -46,6 +47,8 @@ $cBlack: black;
 }
 
 /*
+3Dアニメーションを設定するために必要な要素。
 transform-style: preserve-3d;とすることで、
 子要素に3Dアニメーションを追加することができる。
+perspective: 300px; 
 */

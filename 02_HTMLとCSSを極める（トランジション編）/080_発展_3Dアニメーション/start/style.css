@@ -21,6 +21,8 @@
   z-index: 1;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
+  -webkit-perspective: 300px;
+          perspective: 300px;
 }
 
 .btn.cover-3d::before {
@@ -51,7 +53,9 @@
 }
 
 /*
+3Dアニメーションを設定するために必要な要素。
 transform-style: preserve-3d;とすることで、
 子要素に3Dアニメーションを追加することができる。
+perspective: 300px; 
 */
 /*# sourceMappingURL=style.css.map */
