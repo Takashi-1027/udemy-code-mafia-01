@@ -15,10 +15,11 @@ $cBlack: black;
   cursor: pointer;
   transition: all 0.3s;
 
-  &.slide-bg {
+  &.cover-3d {
     position: relative;
     overflow: hidden;
     z-index: 1;
+    transform-style: preserve-3d;
 
     &::before {
       content: '';
@@ -43,3 +44,8 @@ $cBlack: black;
     }
   }
 }
+
+/*
+transform-style: preserve-3d;とすることで、
+子要素に3Dアニメーションを追加することができる。
+*/
