@@ -42,7 +42,7 @@
   color: white;
 }
 
-.btn.slide-bg:hover span {
+.btn.slide-bg:hover::before {
   -webkit-transform: none;
           transform: none;
 }
