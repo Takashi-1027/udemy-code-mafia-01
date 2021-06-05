@@ -4,8 +4,8 @@
   height: 100px;
   margin: 0 auto;
   background-color: orangered;
-  -webkit-transform: skew(-30deg, -30deg);
-          transform: skew(-30deg, -30deg);
+  -webkit-transform: translateX(50px) scaleY(2);
+          transform: translateX(50px) scaleY(2);
   -webkit-transform-origin: center center;
           transform-origin: center center;
 }
@@ -28,13 +28,13 @@
  
   さらに、transform-origin: top left;
   と並行してに記述すると、回転の始点を設定することができる。
-  例えば、transform-origin: top left;と記述すると、
+  例えば、transform-orig in: top left;と記述すると、
   もともとあった物体(回転させる前の物体)の左上を始点として回転させることができる。
   transform-origin: top left;
                   : bottom right;
                   : center center;
                   : -20px -20px;  (任意の値を入力することができる)
-  */
+*/
 /*
   transform: skew(-30deg);  
   は平行四辺形を定義する時に使う。
@@ -48,5 +48,20 @@
   といった、skewの後にX,Yを記述することで、一つに絞ることができる
   
   transform: skewY(値);は斜めの線を表示したい時に使用することがある。
+  */
+/*
+  transform: scale(x, y);
+  は対象物の元の大きさから、大きさを変えることができる。
+  例えば、transform: scale(2, 1.1);とすると
+  対象物のx軸方向に2倍、y軸方向に1.1倍の大きさになる。
+  */
+/*
+  transform: translateX(50px) scaleY(2);
+  上記のように複数の関数が使える。
+  アニメーションを使用する際には、優先的にtransformプロパティを使用したほうがよい。
+  なぜなら、アニメーションをする際に最適化されたプロパティであるから。
+  位置を調整する際に、top: や left:を使用するよりもパフォーマンスが上がる。
+  しかし、transformでも表せしずらい表現がある場合は
+  top: や left:を使用してもよい。
   */
 /*# sourceMappingURL=style.css.map */
