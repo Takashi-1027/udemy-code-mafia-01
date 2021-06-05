@@ -21,6 +21,18 @@ $cBlack: black;
     z-index: 1;
     transform-style: preserve-3d;
     perspective: 300px; //奥行きを設定する。
+    //perspective: 300px; 上限値はないが300px~1000pxがよく使われる。
+    perspective-origin: top left;
+
+    & span {
+      display: inline-block;
+      transform: translateZ(20px);
+      /*
+      要素の重なりを指定することができる。
+      transform: translateZ(20px);を
+      translate3d(0, 0 ,20px)とすることができる。
+      */
+    }
 
     &::before {
       content: '';
@@ -31,11 +43,11 @@ $cBlack: black;
       position: absolute;
       top: 0;
       left: 0;
-      transform: rotateX(-90deg);
-      transition: transform 0.3s;
+      transform: rotateX(90deg);
+      transition: all 3s; //徐々に遷移する
       transform-origin: top center;
-      z-index: -1;
-      opacity: 0; //透明度を調整することができる、値は0 ~ 1までが可能。
+      // z-index: -1; 同じ平面に要素が来た時にしか作用しない
+      opacity: 0; //透明度を調整することができる、値は0(透明) ~ 1(不透明)までが可能。
     }
 
     &:hover {
