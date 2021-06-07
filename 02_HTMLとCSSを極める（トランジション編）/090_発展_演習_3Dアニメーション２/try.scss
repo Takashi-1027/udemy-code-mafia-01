@@ -17,6 +17,50 @@ $cBlack: black;
 
     &.cubic {
       /** スタイルをここに追加。*/
+      & span {
+        position: absolute;
+        //span要素が重ねて表示する必要があるので、position: absolute;が必要になる。
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // 親要素(.btn)のheight: 50px;と同様に設定しても良い。
+        border: 1px solid $cBlack;
+        line-height: 48px;
+        /*
+        line-height: 48px;となる理由は、親要素(.btn)のheight: 50px;であるが、
+        border: 1px;であり、上下に1pxずつあるため、合わせると2pxなるから。
+        それらを合わせると50pxになるから。親要素(.btn)のheight: 50px;と同じになるから。
+        line-height: 48px;でいい。
+        注意点は、文が二行になると行間が崩れてしまう。そのため、一行におさめるようにする。
+        */
+        text-align: center; //左右を中央ぞろえにする
+        transition: all 0.3s;
+      }
+
+      & .hovering {
+        background-color: $cBlack;
+        color: $cWhite;
+        transform: rotateX(90deg);
+        transform-origin: center center -25px;
+        // transform-origin: x y z;
+      }
+
+      & .default {
+        background-color: $cWhite;
+        color: $cBlack;
+        transform: rotateX(0);
+        transform-origin: center center -25px;
+      }
+
+      &:hover {
+        & .hovering {
+          transform: rotateX(0);
+        }
+        & .default {
+          transform: rotateX(-90deg);
+        }
+      }
     }
   }
 }
