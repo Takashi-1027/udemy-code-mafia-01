@@ -22,17 +22,19 @@
  */
 /* インライン要素に対して */
 // .parent {
-//   text-align: left;
+//   text-align: right;
+//   letter-spacing: -6px; //インライン要素ごとの文字の間隔
+//   //基本的にインライン要素は文字を表すときに使われる。
 // }
 // .child {
-//     display: inline-block;
+//   display: inline-block;
 // }
 
 /* ブロック要素を中央揃え */
 // .parent {
 // }
 // .child {
-//     margin: 0 auto;
+//   margin: 0 auto;
 // }
 
 /**
@@ -48,9 +50,14 @@
 //   transform: translate(-50%, -50%);
 // }
 
-// .parent {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-start;
-//   align-items: flex-end;
-// }
+//flexとposition: absolute;の使い分けについて
+//複数の要素を重ね合わせたい時に上記のようなposition: absolute;を使う
+//flexはposition: absolute;のような複数の要素を重ね合わせることができない。主に、要素を横並びや縦並びにする。
+
+.parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // justify-content: space-around; 要素同士の間に空間を設けることができる
+  // align-items: flex-end;
+}
