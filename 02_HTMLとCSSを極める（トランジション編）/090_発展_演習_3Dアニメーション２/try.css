@@ -10,6 +10,12 @@
           transform-style: preserve-3d;
   -webkit-perspective: 300px;
           perspective: 300px;
+  /*
+    3Dボタンを作りたい場合は下記2つのプロパティを忘れずに！
+    transform-style: preserve-3d;
+    perspective: 300px;
+
+    */
   width: 150px;
   height: 50px;
   margin: 0 auto;
