@@ -12,6 +12,13 @@ $cBlack: black;
     animation: sk-bouncedelay 1.4s infinite;
     // animation: [キーフレーム] [アニメーションが行われる間隔(時間？)] [永遠にループするアニメーションを設定するならば、infinite];
   }
+
+  & .bounce1 {
+    animation-delay: -0.32s;
+  }
+  & .bounce2 {
+    animation-delay: -0.16s;
+  }
 }
 
 @keyframes sk-bouncedelay {
